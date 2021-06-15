@@ -3,76 +3,24 @@
 
 struct {
 	char *nama ;
-	float ktp;
+	long int ktp;
 	char *alamat;
-	float telp;
+	long int telp;
 }pmnjm1,pmnjm2,pmnjm3;
 
 struct penyewa1{
 	char *nama;
-	int ktp;
+	long int ktp;
 	char *alamat;
-	int telp;
+	long int telp;
 };
-
-		void avanza(int a) {
-            int lama, hasil;
-            printf("Anda memilih mobil Avanza   \n");
-            printf ("Plat nomor : W 1534 VC \n Warna : Hitam\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*170000;
-            printf("Total harga sewa adalah %i \n", hasil);
-		}
- 
-		void sigra(int a) {
-            int lama, hasil;
-            printf("Anda memilih mobil sigra  \n");
-            printf ("Plat Nomor : W 1635 NM\n Warna : Silver\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*150000;
-            printf("Total harga sewa adalah %i \n", hasil);
- 
-		}
-
-		void brio(int a) {
-            int lama, hasil;
-            printf("Anda memilih mobil brio   \n");
-            printf("Plat Nomor : W 6383 ON\n Warna : Silver\n");
-            printf("Masukkan lama sewa  : ");
-            scanf("%i",&lama);
-            hasil=lama*130000;
-            printf("Total harga sewa adalah %i \n", hasil);
-    
-		}		
-
-		void ayla(int a) {
-            int lama, hasil;
-            printf("Anda memilih mobil ayla   \n");
-            printf("Plat Nomor : W 1808 HG\n Warna : Merah\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*110000;
-            printf("Total harga sewa adalah %i \n", hasil);
-		}
-
-		void mobilio (int a)   {
-            int lama, hasil;
-            printf("Anda memilih mobil mobilio   \n");
-            printf("Plat Nomor : W 0101 KU\n Warna : Putih\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*140000;
-            printf("Total harga sewa adalah %i \n", hasil);
-		}
 
 
 int main () {
     
     int pilihan, pilih;
-    int mobil[100];
-    int nama_peminjam[100];
+    char *mobil[100];
+    char nama_peminjam[100];
     int tgl, bln, thn;
 	int a,lama;
 	void avanza(int a);
@@ -125,11 +73,11 @@ int main () {
 			printf("Nama     : ");
 			scanf("%s",p1.nama);
 			printf("No.KTP   : ");
-			scanf("%d",p1.ktp);
+			scanf("%ld",&p1.ktp);
 			printf("Alamat   : ");
 			scanf("%s",p1.alamat);
 			printf("No. telp : ");
-			scanf("%d",p1.telp);
+			scanf("%ld",&p1.telp);
 			printf("Registrasi berhasil");
 			goto ulang;
 			break;
@@ -137,24 +85,24 @@ int main () {
 		case 3 :
 			printf("Data peminjam \n");
 			pmnjm1.nama = "Tiya";
-			pmnjm1.ktp = 20081010056;
+			pmnjm1.ktp = (long)20081010056;
 			pmnjm1.alamat = "Surabaya";
-			pmnjm1.telp = 625269574274;
-			printf("Nama: %s \n No. KTP : %lf \n Alamat : %s \n No. Telp : %lf \n",pmnjm1.nama,pmnjm1.ktp,pmnjm1.alamat,pmnjm1.telp);
+			pmnjm1.telp = (long)625269574274;
+			printf("Nama: %s \n No. KTP : %ld \n Alamat : %s \n No. Telp : %ld \n",pmnjm1.nama,pmnjm1.ktp,pmnjm1.alamat,pmnjm1.telp);
 			pmnjm2.nama = "Novi";
-			pmnjm2.ktp = 20081010075;
+			pmnjm2.ktp = (long)20081010075;
 			pmnjm2.alamat = "Mojokerto";
-			pmnjm2.telp = 628236149555;
-			printf("Nama: %s \n No. KTP : %lf \n Alamat : %s \n No. Telp : %lf \n",pmnjm2.nama,pmnjm2.ktp,pmnjm2.alamat,pmnjm2.telp);
+			pmnjm2.telp = (long)628236149555;
+			printf("Nama: %s \n No. KTP : %ld \n Alamat : %s \n No. Telp : %ld \n",pmnjm2.nama,pmnjm2.ktp,pmnjm2.alamat,pmnjm2.telp);
 			pmnjm3.nama = "Aisyah";
-			pmnjm3.ktp = 20081010083;
+			pmnjm3.ktp = (long)20081010083;
 			pmnjm3.alamat = "Sidoarjo";
-			pmnjm3.telp = 6282635148963;
-			printf("Nama: %s \n No. KTP : %lf \n Alamat : %s \n No. Telp : %lf \n",pmnjm3.nama,pmnjm3.ktp,pmnjm3.alamat,pmnjm3.telp);
+			pmnjm3.telp = (long)6282635148963;
+			printf("Nama: %s \n No. KTP : %ld \n Alamat : %s \n No. Telp : %ld \n",pmnjm3.nama,pmnjm3.ktp,pmnjm3.alamat,pmnjm3.telp);
 			printf("Nama : %s \n",p1.nama);
-			printf("KTP : %d \n",p1.ktp);
+			printf("KTP : %ld \n",p1.ktp);
 			printf("Nama : %s \n",p1.alamat);
-			printf("Nama : %d \n",p1.telp);
+			printf("Nama : %ld \n",p1.telp);
 			goto ulang;
 			break;
 			
@@ -213,6 +161,57 @@ int main () {
  		mobilio(a);
  		}
 		return 0;
+        		void avanza(int a); {
+            int lama, hasil;
+            printf("Anda memilih mobil Avanza   \n");
+            printf ("Plat nomor : W 1534 VC \n Warna : Hitam\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*170000;
+            printf("Total harga sewa adalah %i \n", hasil);
+		}
+ 
+		void sigra(int a); {
+            int lama, hasil;
+            printf("Anda memilih mobil sigra  \n");
+            printf ("Plat Nomor : W 1635 NM\n Warna : Silver\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*150000;
+            printf("Total harga sewa adalah %i \n", hasil);
+ 
+		}
+
+		void brio(int a); {
+            int lama, hasil;
+            printf("Anda memilih mobil brio   \n");
+            printf("Plat Nomor : W 6383 ON\n Warna : Silver\n");
+            printf("Masukkan lama sewa  : ");
+            scanf("%i",&lama);
+            hasil=lama*130000;
+            printf("Total harga sewa adalah %i \n", hasil);
+    
+		}		
+
+		void ayla(int a); {
+            int lama, hasil;
+            printf("Anda memilih mobil ayla   \n");
+            printf("Plat Nomor : W 1808 HG\n Warna : Merah\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*110000;
+            printf("Total harga sewa adalah %i \n", hasil);
+		}
+
+		void mobilio (int a);   {
+            int lama, hasil;
+            printf("Anda memilih mobil mobilio   \n");
+            printf("Plat Nomor : W 0101 KU\n Warna : Putih\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*140000;
+            printf("Total harga sewa adalah %i \n", hasil);
+		}
 	}
 }
 }
