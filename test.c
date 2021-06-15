@@ -15,6 +15,57 @@ struct penyewa1{
 	long int telp;
 };
 
+        void avanza(int a) {
+			int hasil, lama;
+            printf("Anda memilih mobil Avanza   \n");
+            printf ("Plat nomor : W 1534 VC \n Warna : Hitam\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*170000;
+            printf("Total harga sewa adalah %i \n", hasil);
+		}
+ 
+		void sigra(int a) {
+			int hasil, lama;
+            printf("Anda memilih mobil sigra  \n");
+            printf ("Plat Nomor : W 1635 NM\n Warna : Silver\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*150000;
+            printf("Total harga sewa adalah %i \n", hasil);
+ 
+		}
+
+		void brio(int a) {
+			int hasil, lama;
+            printf("Anda memilih mobil brio   \n");
+            printf("Plat Nomor : W 6383 ON\n Warna : Silver\n");
+            printf("Masukkan lama sewa  : ");
+            scanf("%i",&lama);
+            hasil=lama*130000;
+            printf("Total harga sewa adalah %i \n", hasil);
+    
+		}		
+
+		void ayla(int a) {
+			int hasil, lama;
+            printf("Anda memilih mobil ayla   \n");
+            printf("Plat Nomor : W 1808 HG\n Warna : Merah\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*110000;
+            printf("Total harga sewa adalah %i \n", hasil);
+		}
+
+		void mobilio (int a)   {
+			int hasil, lama;
+            printf("Anda memilih mobil mobilio   \n");
+            printf("Plat Nomor : W 0101 KU\n Warna : Putih\n");
+            printf("Masukkan lama sewa : ");
+            scanf("%i",&lama);
+            hasil=lama*140000;
+            printf("Total harga sewa adalah %i \n", hasil);
+		}
 
 int main () {
     
@@ -22,12 +73,7 @@ int main () {
     char *mobil[100];
     char nama_peminjam[100];
     int tgl, bln, thn;
-	int a,lama;
-	void avanza(int a);
-	void sigra(int a);
-	void brio(int a);
-	void ayla(int a);
-	void mobilio(int a);
+	int a,lama, hasil;
 	
 	{
 	ulang :
@@ -139,14 +185,20 @@ int main () {
  		scanf("%d",&thn);
  		printf(" Masukkan Pilihan mobil (1/2/3/4/5): ");
  		scanf("%i", &pilihan);
- 
+
+		void avanza(int a);
+		void sigra (int a);
+		void brio (int a);
+		void ayla (int a);
+		void mobilio(int a);
+		
 		if(pilihan==1)
  		{
  		avanza(a);
  		}
  		else if(pilihan==2)
  		{
- 		sigra(a);
+		 sigra(a);
  		}
  		else if(pilihan==3)
  		{
@@ -161,57 +213,6 @@ int main () {
  		mobilio(a);
  		}
 		return 0;
-        		void avanza(int a); {
-            int lama, hasil;
-            printf("Anda memilih mobil Avanza   \n");
-            printf ("Plat nomor : W 1534 VC \n Warna : Hitam\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*170000;
-            printf("Total harga sewa adalah %i \n", hasil);
-		}
- 
-		void sigra(int a); {
-            int lama, hasil;
-            printf("Anda memilih mobil sigra  \n");
-            printf ("Plat Nomor : W 1635 NM\n Warna : Silver\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*150000;
-            printf("Total harga sewa adalah %i \n", hasil);
- 
-		}
-
-		void brio(int a); {
-            int lama, hasil;
-            printf("Anda memilih mobil brio   \n");
-            printf("Plat Nomor : W 6383 ON\n Warna : Silver\n");
-            printf("Masukkan lama sewa  : ");
-            scanf("%i",&lama);
-            hasil=lama*130000;
-            printf("Total harga sewa adalah %i \n", hasil);
-    
-		}		
-
-		void ayla(int a); {
-            int lama, hasil;
-            printf("Anda memilih mobil ayla   \n");
-            printf("Plat Nomor : W 1808 HG\n Warna : Merah\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*110000;
-            printf("Total harga sewa adalah %i \n", hasil);
-		}
-
-		void mobilio (int a);   {
-            int lama, hasil;
-            printf("Anda memilih mobil mobilio   \n");
-            printf("Plat Nomor : W 0101 KU\n Warna : Putih\n");
-            printf("Masukkan lama sewa : ");
-            scanf("%i",&lama);
-            hasil=lama*140000;
-            printf("Total harga sewa adalah %i \n", hasil);
-		}
 	}
 }
 }
